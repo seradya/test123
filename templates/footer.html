@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row align-items-center screen">
+    </div>
+    <form id="feedback" method="post" action="{% url 'feedback' %}">{% csrf_token %}
+        <h1 class="text-center">Оставьте заявку, мы вам не напишем.</h1>
+        <div class="row mb-5">
+            <div class="col">
+                {{ form.name }}
+            </div>
+            <div class="col">
+                {{ form.email }}
+            </div>
+            <button  id="button-feedback" type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+</div>

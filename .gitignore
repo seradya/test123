@@ -1,0 +1,18 @@
+*.pyc
+*~
+__pycache__
+.idea/
+test123env/
+node_modules/
+static/assets/libs/
+package.json
+package-lock.json
+
+
+#Uncoment and delete to deploy
+/static/assets/sass/
+/static/assets/js/common.js
+/static/static/
+/.bowerrc
+/gulpfile.js
+/README.md

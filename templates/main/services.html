@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Услуги</title>{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            {% for good in goods %}
+                <div class="col-4 text-center mt-5 mb-5">
+                    <div class="card" style="width: 18rem;  border: 3px solid black; background-color: darkgrey">
+                        <img src="{{ good.img.url }}" class="card-img-top" alt="iPhone X">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ good.article }}</h5>
+                            <p class="card-text">{{ good.description }}</p>
+                            <p class="card-text">Цена: {{ good.price }} руб.</p>
+                            <a href="#" class="btn btn-primary">Переход куда-нибудь.</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
