@@ -3,7 +3,6 @@
 VCS -> Checkout from Version Control -> Git
 
 
-
 VCS -> Import into Version Control -> Share Project on GitHub		# создание репозитория на github
 
 git init								# инициализация
