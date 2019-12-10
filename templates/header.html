@@ -4,11 +4,19 @@
             Mega.
         </div>
         <div class="col">
+        {% if user.is_anonymous %}
+            Зарегистрируйся
+            <a href="{% url 'auth123:register' %}">Здесь!</a>
+            или
+            <a href="{% url 'auth123:login' %}">войди</a>
+        {% endif %}
+        </div>
+        <div class="col">
             <ul class="ul">
                 <li><a href="{% url 'main' %}">Homepage</a></li>
                 <li>About us</li>
                 <li><a href="{% url 'services' %}">Services</a></li>
-                <li>Works</li>
+                <li><a href="{% url 'delivery' %}">Delivery</a></li>
                 <li>Blog</li>
                 <li>Pages</li>
                 <li>Contact us</li>

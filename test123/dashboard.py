@@ -33,6 +33,12 @@ class CustomIndexDashboard(Dashboard):
                     collapsible=False,
                     models=('django.contrib.*',),
                 ),
+                modules.AppList(
+                    _('Пользователи'),
+                    column=1,
+                    collapsible=False,
+                    models=('auth123.models.CustomUser',),
+                )
             ]
         ))
 

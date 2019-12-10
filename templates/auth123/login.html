@@ -2,5 +2,8 @@
 {% block title %}<title>Вход</title>{% endblock %}
 
 {% block content %}
-
+    <form action="{% url 'auth123:login' %}" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}

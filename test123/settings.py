@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    'auth123',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,16 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Authorization
+
+AUTH_USER_MODEL = 'auth123.CustomUser'
+LOGIN_URL = 'auth/login'
+LOGIN_REDIRECT_URL = ''
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend'
 ]
 
 
